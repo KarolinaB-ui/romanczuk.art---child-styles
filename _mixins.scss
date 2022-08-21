@@ -1,0 +1,43 @@
+/******************************************************************
+Site Name: romanczuk.art
+Author: Design et
+
+Stylesheet: Main child theme stylesheet
+******************************************************************/
+
+$white: #F9FAFB;
+$black: #010412;
+
+$dark-blue: #311F86;
+$light-blue: #1DA1F2;
+$purple: #833AB4;
+$red: #DE4424;
+$gold: #D5A419;
+
+$dark-grey: #30333C;
+$mid-grey: #979797;
+$light-grey: #f5f5f5;
+
+@mixin button($color, $color2, $color3) {
+    background-color: rgba( 0, 0, 0, 0) !important;
+    border: 2px solid $color !important;
+    border-radius: 4px !important;
+    color: $color !important;
+    font-weight: 600 !important;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    transition: 0.5s;
+    padding: 12px 18px 12px 18px !important;
+
+    &:hover{
+        background-color: $color !important;
+        color: $color3 !important;
+    }
+}
+
+@mixin heading($color, $size) {
+    color: $color !important;
+    font-size: $size !important;
+    font-family: 'Playfair Display', 'roboto', sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+}

@@ -1,0 +1,512 @@
+/******************************************************************
+Site Name: romanczuk.art
+Author: Design et
+
+Stylesheet: Main child theme stylesheet
+******************************************************************/
+
+/* My account */
+.ld-profile{
+	.ld-section-heading{
+		h3{
+			@include heading($black, 24px);
+		}
+	}
+}
+
+.button-login-logout{
+	a{
+		@include button($white, $black, $gold);
+		font-weight: 600 !important;
+
+		&:hover{
+			color: $gold;
+		}
+	}
+}
+
+/*WooCommerce*/
+
+/*Product*/
+
+.ast-woocommerce-container{
+
+    .woocommerce-product-gallery{
+        margin-bottom: 0 !important;
+    }
+
+    .entry-summary{
+        background-color: $light-grey !important;
+        margin: 2%; 
+        padding: 40px 50px;
+        color: $dark-grey;
+
+        .woocommerce-Price-amount{
+            background-color: $gold;
+            color: $white;
+            border-radius: 2px;
+            padding: 12px 18px;
+        }
+
+        .woocommerce-product-details__short-description{
+            ul{
+                list-style: none;
+                padding: 0;
+
+                li{
+                    padding-left: 1.3em;
+                }
+
+                li:before{
+                    content: "\f00c"; /* FontAwesome Unicode */
+                    font-family: FontAwesome;
+                    display: inline-block;
+                    margin-left: -1.3em; /* same as padding-left set on li */
+                    width: 1.3em; /* same as padding-left set on li */
+                }
+            }
+		}
+
+        .single_add_to_cart_button{
+            @include button($black, $white, $white);
+        }
+    }
+
+    .wc-tabs{
+        display: none;
+    }
+    .learndash-wrapper{
+        .ld-section-heading h2{
+            display: none;
+        }
+
+        .ld-item-list-items{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            column-gap: 12px;
+        }
+
+    }
+}
+
+.related.products {
+	margin:auto;
+	max-width:1200px;
+	padding:30px;
+}
+
+.related.products h2 {
+	font-family:'Playfair Display', 'roboto', sans-serif;
+	font-weight:800 !important;
+	font-size:22px !important;
+}
+
+/*account page*/
+
+#user_profile-page{
+	.learndash-wrapper{
+		.ld-profile-avatar{
+			background-color: $black;
+		}
+		.ld-profile-heading{
+			font-family: "Playfair Display", sans-serif;
+		}
+
+		.ld-item-list {
+
+			.ld-section-heading{
+				margin-bottom: 20px;
+			} 
+		}
+	} 
+}
+
+.woocommerce-MyAccount-navigation{
+	.woocommerce button.button{
+		@include button($black, $white, $black);
+	}
+}
+
+.ld-course-list-items{
+	text-align: center !important;
+
+	.ld_course_grid_price{
+		background: $black !important;
+	}
+	.caption{
+		background-color: $light-grey;
+			.entry-title{
+				font-family: "Playfair Display", sans-serif;
+			}
+		.ld_course_grid_button{
+			margin: 20px;
+			a{
+				@include button($black, $white, $white);
+				display: inline;
+			}
+		}
+	}
+
+}
+
+.woocommerce-MyAccount-navigation-link{
+	font-family: "Roboto", sans-serif;
+	border: none !important;
+	font-weight: 800 !important;
+	font-size: 16px;
+	padding: 12px 18px;
+	border-right: 2px solid $light-grey;
+}
+
+.woocommerce-MyAccount-navigation-link.is-active a{
+	background-color: $light-grey;
+}
+
+.woocommerce-MyAccount-content{
+	padding: 12px 18px;
+	font-size: 16px;
+}
+
+/*shop*/
+
+.ast-woocommerce-container{
+	.onsale{
+		border-radius: 2px !important;
+		padding: 0 15px !important;
+	}
+	.astra-shop-summary-wrap{
+		padding:20px;
+		background-color: $light-grey;
+		z-index: 100;
+		border-radius: 0 0 4px 4px!important;
+		text-align:center;
+	}
+	.astra-shop-summary-wrap .woocommerce-Price-amount{
+		background-color: $gold;
+		padding: 5px;
+		color: $white;
+	}
+
+	.astra-shop-summary-wrap h2{
+		font-family: 'Playfair Display', 'roboto', sans-serif;
+		font-weight: 800 !important;
+		font-size: 22px !important;
+	}
+
+	.astra-shop-thumbnail-wrap a img{
+		margin-bottom: 0!important;
+	}
+
+	.woocommerce ul.products li.product .price{
+		display: block !important;
+		margin: 20px !important;
+	}
+}
+
+/* wpform styles */
+
+div.wpforms-container-full .wpforms-form .wpforms-field-label{
+	font-family: 'Roboto', 'Helevetica', sans-serif;
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+div.wpforms-container-full .wpforms-form input[type=text],div.wpforms-container-full .wpforms-form input[type=email],div.wpforms-container-full .wpforms-form textarea{
+	border-radius: 2px;
+	border: 1px solid #f2f2f2;
+}
+
+ div.wpforms-container-full .wpforms-form button[type=submit]{
+	border: 2px solid #fff;
+	border-radius: 2px;
+	background-color: rgba(255,255,255,0);
+	color: #fff;
+	font-family: 'Roboto', 'Helevetica', sans-serif;
+	font-weight: 600;
+	font-size: 18px;
+	margin-top: 35px;
+	padding: 15px 40px 16px 40px;
+	transition: 0.5s;
+}
+
+ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
+	border: 2px solid #fff;
+	border-radius: 2px;
+	background-color: #fff;
+	color: #D5A419;
+}
+
+.wpforms-submit-container{
+	text-align: center;
+}
+
+/* gallery button */
+/* dark br button*/
+.rbs_gallery_5fd2b4f4adf1cSpinner{
+	margin-bottom: 50px !important;
+}
+
+.rbs_gallery_button .button,
+body .button-dark_bg .elementor-button.elementor-size-sm{
+	background-color: #010412 !important;
+	color: #fff !important;
+	border: 2px solid #fff !important;
+	border-radius: 2px;
+	box-shadow: none !important;
+	font-family: 'Roboto', 'Helevetica', sans-serif !important;
+	font-weight: 500 !important;
+	font-size: 16px !important;
+	transition: 0.5s;
+}
+
+.rbs_gallery_button .button{
+	margin-bottom: 30px !important;
+}
+
+.rbs_gallery_button .button-large{
+	line-height: 35px !important;
+}
+
+.rbs_gallery_button .button-flat:hover,
+.rbs_gallery_button .button-flat:focus,
+body .button-dark_bg .elementor-button.elementor-size-sm:hover,
+body .button-dark_bg .elementor-button.elementor-size-sm:focus{
+	background: #fff !important;
+	color: #D5A419 !important;
+	font-family: 'Roboto', 'Helevetica', sans-serif !important;
+	font-weight: 500 !important;
+	font-size: 16px !important;
+}
+
+.rbs_gallery_button .button-flat-royal.active,
+.rbs_gallery_button .button.active{
+	background: #fff !important;
+	color: #D5A419 !important;
+	font-family: 'Roboto', 'Helevetica', sans-serif !important;
+	font-weight: 500 !important;
+	font-size: 16px !important;
+}
+
+.log_in-log_out-link a{
+	text-align: center;
+	color: #fff;
+	font-weight: 800px;
+}
+.rbs_gallery_button .button-large{
+	line-height: 35px !important;
+}
+
+.gold_devider-icon{
+	width: 300px;
+	color: --e-global-color-cfa2fd3;
+}
+
+/* sesje */
+.ast-separate-container.post-type-archive-sesja #primary:before {
+	content: "Projekty";
+	font-family: 'Playfair Display', 'roboto', sans-serif;
+	font-weight: 800;
+	font-size: 40px;
+	text-align: center;
+	margin: auto;
+	padding-bottom: 1em;
+}
+
+.ast-archive-description{
+	display: none;
+}
+
+#main .ast-row article.type-sesja {
+	width: 100%;
+	padding: 1.5em !important;
+	border-bottom: none !important;
+
+	.ast-blog-featured-section{
+		margin-bottom: 0 !important;
+	}
+
+	.entry-header {
+		background-color: $light-grey;
+		padding: 20px;
+		border-bottom: 3px $gold solid;
+		border-radius: 5px;
+		text-align: center;
+
+		h2.entry-title {
+			a {
+				font-family: 'Playfair Display', 'roboto', sans-serif;
+				font-size: 28px;
+				font-weight: 800;
+			}
+		}
+	}
+	
+	.entry-content{
+		display: none;
+	}
+}
+
+/**** Boczna nawigacja ****/
+
+.ast-left-sidebar.ast-single-post #primary{
+	padding-left: 0 !important;
+	padding-right:  0 !important;
+	border-color: lighten($black,5) !important;
+}
+
+.widget-area #secondary, //Archive
+.ast-left-sidebar #secondary{
+	display: none;
+}
+
+.content-area #primary, // Archive
+.ast-left-sidebar #primary,
+.ast-left-sidebar.ast-single-post #primary{
+	margin-left: 0;
+	width: 100%;
+}
+
+footer{
+	margin-left: 0;
+}
+
+@media only screen and (min-width: 992px){
+	body.admin-bar{
+		.ast-left-sidebar #secondary{
+			.sidebar-main{
+				margin-top: 6.5px !important;
+			}
+		}
+	}
+	footer{
+		margin-left: 20%;
+	}
+	.ast-woo-shop-archive .site-content > .ast-container,
+	.ast-separate-container.ast-left-sidebar .ast-container{
+		max-width: 100% !important;
+		padding: 0 !important;
+	}
+	.ast-separate-container.ast-two-container #secondary .widget{
+		background: none !important;
+		padding: 0 !important;
+	}
+	.ast-separate-container.ast-left-sidebar #primary, // archive
+	.ast-left-sidebar #primary,
+	.ast-left-sidebar.single-post #primary{
+		margin-left: 20% !important;
+		width: 80% !important;
+		border-left: none !important;
+	}
+	
+	.widget-area #secondary,
+	.ast-left-sidebar #secondary{
+		display: block;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+		background-color: $black !important;
+		border-color: lighten($black,5) !important;
+		color: $white;
+		width: 20%;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		.sidebar-main{
+			padding-top: 8vh !important;
+			padding-left: 20px !important;
+			padding-bottom: 8vh !important;
+			padding-right: 20px !important;
+			text-align: center;
+			nav li:not(:last-child){
+				margin-bottom: 2.5vh !important;
+				a{
+					color: $white;
+					position: relative;
+					text-decoration: none;
+					padding-bottom: 6px;
+					&:before {
+						content: "";
+						position: absolute;
+						display: block;
+						width: 100%;
+						height: 2px;
+						bottom: 0;
+						left: 0;
+						background-color: $white;
+						transform: scaleX(0);
+						transform-origin: top left;
+						transition: transform 0.3s ease;
+					}
+					&:hover{
+						&:before{
+							color: $white;
+							transform: scaleX(1);
+						}
+					}
+				}
+			}
+			nav li:last-child{
+				margin-top: 4vh;
+				a{
+					@include button($white, $black, $gold);
+					font-weight: 600 !important;
+					background-color: $gold !important;
+					&:hover{
+						color: $gold;
+					}
+				}
+			}
+		}
+	}
+
+	// cart icon
+	li.cart-menu{
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		
+		.cart-contents-count {
+			position: absolute;
+			top: 41px;
+			left: 10px;
+			transform: translateY(-105%) translateX(25%);
+			font-weight: bold;
+			font-size: 16px;
+			vertical-align: middle;
+			text-align: center;
+			color: #fff;
+			padding: 1px;  
+
+			&:hover{
+				text-decoration: none;
+			}
+		}
+
+		.cart-contents {
+			position: relative;
+			display: flex !important;
+			flex-flow: column nowrap;
+			justify-content: center;
+			background: url(https://romanczuk.art/wp-content/uploads/2022/08/basket.png) no-repeat;
+			background-size: 38px;
+			width: 38px;
+			height: 38px;
+
+			&:hover{
+				background: url(https://romanczuk.art/wp-content/uploads/2022/08/basket-hover.png) no-repeat;
+				background-size: 38px;
+
+				.cart-contents-count{
+					color: $gold;
+				}
+			}
+		}
+		
+
+	}
+}
+
+
